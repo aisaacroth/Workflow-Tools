@@ -27,6 +27,7 @@ def convertToSeconds(minutes):
 def startTimer(seconds):
     time.sleep(seconds)
 
+
 def print_arguments():
     print("python3 timer.py <minutes>")
 

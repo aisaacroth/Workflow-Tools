@@ -25,7 +25,6 @@ def format_new_lines(line_buff):
     dirty_buff = []
     for line in line_buff:
         dirty_buff.extend(textwrap.wrap(line, width=80))
-    print(dirty_buff)
     output_buff = []
     for line in dirty_buff:
         output_buff.append(line + '\n')

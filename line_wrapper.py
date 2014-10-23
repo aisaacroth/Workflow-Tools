@@ -32,7 +32,6 @@ def format_new_lines(line_buff):
 
 
 def write_to_file(filename, line_buff):
-    print(line_buff)
     output_file = open(filename, 'w')
     for i in line_buff:
         output_file.write(i)

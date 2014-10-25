@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 ''' Simple pomodoro timer, runs on a number of cycles provided by the user.
+
+Author: Alexander Roth
+Date:   2014-10-25
 '''
 import sys
 import timer

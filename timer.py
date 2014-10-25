@@ -25,7 +25,9 @@ def convertToSeconds(minutes):
 
 
 def startTimer(seconds):
-    time.sleep(seconds)
+    for i in range(seconds + 1):
+        sys.stdout.write('\r{:.0f}%'.format((i/seconds)*100))
+        time.sleep(1)
 
 
 def print_arguments():

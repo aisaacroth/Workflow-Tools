@@ -35,7 +35,7 @@ def runCycle(work_time, rest_time):
 
 
 def print_arguments():
-    print('python3 pomodoro_timer.py <number of cycles>')
+    print('python3 pomodoro.py <number of cycles>')
     sys.exit(1)
 
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-''' A simple script to remove access whitespace at the end
+''' A simple script to remove excess whitespace at the end
 of each line in a file.
 
 Author:  Alexander Roth

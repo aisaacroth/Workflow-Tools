@@ -15,8 +15,7 @@ def main(cycles):
 
 
 def prepCycle():
-    '''
-    Prepares cycle time values. Fixed to 25 minutes and 5 minutes.
+    ''' Prepares cycle time values. Fixed to 25 minutes and 5 minutes.
     '''
     work_time = timer.convertToSeconds(25)
     rest_time = timer.convertToSeconds(5)
@@ -24,9 +23,8 @@ def prepCycle():
 
 
 def runCycle(work_time, rest_time):
-    '''
-    Runs the cycle; sends bell response to terminal and prints out
-    cycle prompts to the user.
+    ''' Runs the cycle; sends bell response to terminal and prints out cycle 
+    prompts to the user.
     '''
     print("Start of work cycle")
     timer.startTimer(work_time)

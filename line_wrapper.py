@@ -24,7 +24,10 @@ def read_in_file(filename):
 def format_new_lines(line_buff):
     dirty_buff = []
     for line in line_buff:
-        dirty_buff.extend(textwrap.wrap(line, width=80))
+        if line == '\n':
+            dirty_buff.append('')
+        else:
+            dirty_buff.extend(textwrap.wrap(line, width=80))
     output_buff = []
     for line in dirty_buff:
         output_buff.append(line + '\n')

@@ -10,6 +10,7 @@ while getopts ":p:" opt; do
     esac
 done
 
-./clean-wrap.sh $1
-git add $1
-git commit -m "$2" $1
+if [ $# == 2 ] ; then
+    ./clean-wrap.sh $1
+    git add $1
+    git commit -m "$2" $1

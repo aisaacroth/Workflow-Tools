@@ -27,6 +27,7 @@ while [ "$1" != "" ]; do
             done
             echo "$2"
             git commit -m "$2"
+            ;;
     esac
     shift
 done

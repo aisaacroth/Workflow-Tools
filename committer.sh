@@ -19,7 +19,7 @@ while [ "$1" != "" ]; do
             usage
             ;;
         -a | --all )
-            while [ $1 != "-c" ]; do
+            while [ "$1" != "-c" ]; do
                 shift
                 echo "$1"
                 ./clean-wrap.sh $1

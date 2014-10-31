@@ -7,13 +7,15 @@ function usage {
 
 while [ "$1" != "" ]; do
     case $1 in
-        -p | --push )    shift
-                         ./clean-wrap.sh $1
-                         git add $1
-                         git commit -m "$2" $1
-                         git push
-                         ;;
-        -h | --help )    usage
+        -p | --push )
+            shift
+            ./clean-wrap.sh $1
+            git add $1
+            git commit -m "$2" $1
+            git push
+            ;;
+        -h | --help )
+            usage
     esac
     shift
 done

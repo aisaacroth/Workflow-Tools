@@ -1,5 +1,5 @@
 #!/bin/sh
-# committer = A script that cleans a file then commits it or pushes to git.
+# committer - A script that cleans a file then commits it or pushes to git.
 
 function usage {
     echo "usage: committer [[-p push ] [-h]]"
@@ -21,7 +21,6 @@ while [ "$1" != "" ]; do
         -a | --all )
             while [ "$1" != "" ]; do
                 shift
-                echo "$1"
                 if [ "$1" == "-c" ] ; then
                     break
                 fi

@@ -19,13 +19,15 @@ while [ "$1" != "" ]; do
             usage
             ;;
         -a | --all )
-            while [ "$1" != "-c" ]; do
+            while [ "$1" != "" ]; do
                 shift
                 echo "$1"
+                if [ "$1" == "-c" ] ; then
+                    break
+                fi
                 ./clean-wrap.sh $1
                 git add $1
             done
-            echo "$2"
             git commit -m "$2"
             ;;
     esac

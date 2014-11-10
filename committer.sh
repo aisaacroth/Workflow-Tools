@@ -2,7 +2,7 @@
 # committer - A script that cleans a file then commits it or pushes to git.
 
 function usage {
-    echo "usage: committer [[-p push ] [-m message] [-h]]"
+    echo "usage: committer [[-p --push ] [-m --message] [-h --help]]"
 }
 
 function clean_add {
@@ -15,6 +15,13 @@ function commit_push {
     git push
 }
 
+if [ $# == 2 ] ; then
+    clean_add $1
+    git commit -m "$2" $1
+elif [ $# == 1 ] || [ $# == 0 ] ; then
+    usage
+fi
+
 while [ "$1" != "" ]; do
     case $1 in
         -p | --push )
@@ -23,13 +30,10 @@ while [ "$1" != "" ]; do
             shift
             commit_push "$1"
             ;;
-        -h | --help )
-            usage
-            ;;
         -a | --all )
             while [ "$1" != "" ]; do
                 shift
-                if [ "$1" == "-m" || "$1" == "--message" ] ; then
+                if [ "$1" == "-m" ] || [ "$1" == "--message" ] ; then
                     break
                 fi
                 clean_add $1
@@ -39,8 +43,3 @@ while [ "$1" != "" ]; do
     esac
     shift
 done
-
-if [ $# == 2 ] ; then
-    clean_add $1
-    git commit -m "$2" $1
-fi

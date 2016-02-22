@@ -12,6 +12,7 @@ import webbrowser
 def main():
     webbrowser.open('https://mail.google.com/mail/u/1/#inbox')
     webbrowser.open('https://inbox.google.com/u/0/')
+    webbrowser.open('http://www.accuweather.com/en/us/new-york-ny/10027/weather-forecast/349727')
 
 
 def print_arguments(arg):
